@@ -1,7 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { ProductCards } from './components/productCards';
+import './styles/productCards.css'
 
 function App() {
   // Create fake data to pass as props to our component
@@ -47,15 +46,18 @@ function App() {
   return (
     <div>
       {/* map through our fake data to pass as props */}
-      { data.map((item, index) => (
-        <ProductCards
-          key={ index }
-          name={ item.name }
-          description={ item.description }
-          price={ item.price }
-          imgURL={ item.imgURL }
-        />
-      ))}
+      {/* this will apply to all card components for each data entry */}
+      <div className='container'>
+        { data.map((item, index) => (
+          <ProductCards
+            key={ index }
+            name={ item.name }
+            description={ item.description }
+            price={ item.price }
+            imgURL={ item.imgURL }
+          />
+        ))}
+      </div>
 
     </div>
   );
