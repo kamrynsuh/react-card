@@ -3,6 +3,11 @@
     padding: 5% 0;
     justify-content: center;
     font-family: "Helvetica";
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    justify-content: center;
+    align-items: start;
 }
 
 .card {
@@ -15,6 +20,7 @@
     background-color: white;
     box-sizing: border-box;
     border-style: solid;
+    border-color: rgb(219, 219, 219);
     border-radius: 6px;
     border-width: 1px;
 }
@@ -27,6 +33,8 @@
 .card h3 {
     flex: 1;
     align-self: flex-end;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 .img {
@@ -55,6 +63,7 @@
     border-radius: 5px;
     border-width: 1px;
     cursor: pointer;
+    transition: 0.2 ease;
 }
 
 .button-save {
@@ -70,11 +79,12 @@
     border-radius: 5px;
     border-width: 1px;
     cursor: pointer;
+    transition: 0.2 ease;
 }
 
 .button-save:hover {
-    background-color: rgb(87, 107, 89);
-    color: white;
+    background-color: rgb(221, 236, 222);
+    color: rgb(0, 0, 0);
 }
 
 .button-add:hover {
@@ -85,16 +95,23 @@
 .accordion-button {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
     letter-spacing: 1px;
-    background-color: rgb(233, 233, 233);
+    padding: 2%;
+    background-color: rgb(241, 241, 241);
     border-style: solid;
+    border-color: rgb(207, 207, 207);
     border-radius: 5px;
     border-width: 1px;
     box-shadow: 0 4px 12px rgba(92, 92, 92, 0.137);
+}
+
+.accordion-button:hover {
+    background-color: rgb(221, 236, 222);
+    transition: all 0.2 ease-in-out;
 }
 
 .accordion-content {
@@ -103,6 +120,12 @@
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
+    border-color: rgb(212, 212, 212);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in;
+    padding: 0;
 }
 
 .accordion-content.show {

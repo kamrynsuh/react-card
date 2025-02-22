@@ -13,7 +13,6 @@ const ProductCards = ({ name, description, price, imgURL }: ProductProps) => {
     // State for the "View Details" accordion for our description
     const [ openDescription, setOpenDescription ] = useState(false);
 
-    console.log("desc:", openDescription)
     return (
         <div className="card">
             <img className="img" src={ imgURL } alt={ name }></img>
@@ -51,5 +50,4 @@ const ProductCards = ({ name, description, price, imgURL }: ProductProps) => {
     )
 }
 
-//export our function here now
 export { ProductCards }
